@@ -1,0 +1,39 @@
+body{
+    background-color: #22252d;
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+}
+.line{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+#element{
+    background-color: #474747;
+    /* background-color: #444; */
+    padding: 30px 116.65px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#element:hover{
+    background-color: #3a4452;
+}
+#element2{
+    background-color: skyblue;
+    color: black;
+    padding: 30px 116.65px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.display{
+    margin: 0;
+    padding: 1.15rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+}
