@@ -21,7 +21,7 @@
             </div>
             <div class="keys">
                 <!-- <div class="line"> -->
-                    <div data_key="%" id="element3" class="key action">
+                    <div data-key="%" id="element3" class="key action">
                         <span>
                             %
                         </span>
@@ -140,7 +140,7 @@
                             .
                         </span>
                     </div>
-                    <div data-key="=" id="element2" class="key operator">
+                    <div data-key="=" id="element2" class="key operator" onclick="ans()">
                         <span>
                             =
                         </span>
@@ -148,8 +148,15 @@
                 <!-- </div> -->
             </div>
         </div>
-        <div class="history">
-            
+        <div style="position: relative;">
+            <div class="history">
+
+            </div>
+            <div class="remove">
+                <button onclick="rmv()" class="rm">
+                    Remove
+                </button>
+            </div>
         </div>
     </div>
     <script src="./calculator.js"></script>
