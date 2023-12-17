@@ -7,112 +7,151 @@
     <link rel="stylesheet" href="./calculator.css">
 </head>
 <body>
-    <div class="main">
-        <div class="main_content">
+    <div class="app">
+        <div class="calculator">
             <div class="display">
                 <div class="content">
                     <div class="input">
-                        120
-                        <span class="operator">
-                            *
-                        </span>
-                        100
+
                     </div>
-                    <h1 class="output">
-                        12,000
-                    </h1>
-                </div>
-            </div>
-            <div class="calculator">
-                <div class="line">
-                    <div id="per" class="element3">
-                        %
-                    </div>
-                    <div id="ce" class="element3">
-                        CE
-                    </div>
-                    <div id="c" class="element3">
-                        C
-                    </div>
-                    <div id="back" class="element3">
-                        <
-                    </div>
-                </div>
-                <div class="line">
-                    <div class="element3" style="opacity: 0;">
-                        
-                    </div>
-                    <div class="element3" style="opacity: 0;">
-                        
-                    </div>
-                    <div class="element3" style="opacity: 0;">
-                        
-                    </div>
-                    <div id="divi" class="element3">
-                        /
-                    </div>
-                </div>
-                <div class="line">
-                    <div id="seven" class="element">
-                        7
-                    </div>
-                    <div id="eight" class="element">
-                        8
-                    </div>
-                    <div id="nine" class="element">
-                        9
-                    </div>
-                    <div id="star" class="element3">
-                        *
-                    </div>
-                </div>
-                <div class="line">
-                    <div id="four" class="element">
-                        4
-                    </div>
-                    <div id="five" class="element">
-                        5
-                    </div>
-                    <div id="six" class="element">
-                        6
-                    </div>
-                    <div id="min" class="element3">
-                        -
-                    </div>
-                </div>
-                <div class="line">
-                    <div id="one" class="element">
-                        1
-                    </div>
-                    <div id="two" class="element">
-                        2
-                    </div>
-                    <div id="three" class="element">
-                        3
-                    </div>
-                    <div id="plus" class="element3">
-                        +
-                    </div>
-                </div>
-                <div class="line">
-                    <div id="plumi" class="element">
-                        +/-
-                    </div>
-                    <div id="zero" class="element">
+                    <div class="output">
                         0
                     </div>
-                    <div id="dot" class="element">
-                        .
-                    </div>
-                    <div id="equ" class="element2">
-                        =
-                    </div>
                 </div>
+            </div>
+            <div class="keys">
+                <!-- <div class="line"> -->
+                    <div data_key="%" id="element3" class="key action">
+                        <span>
+                            %
+                        </span>
+                    </div>
+                    <div data-key="clear" id="element3" class="key action">
+                        <span>
+                            CE
+                        </span>
+                    </div>
+                    <div data-key="clear" id="element3" class="key action">
+                        <span>
+                            C
+                        </span>
+                    </div>
+                    <div data-key="back" id="element3" class="key action">
+                        <span>
+                            <
+                        </span>
+                    </div>
+                <!-- </div>
+                <div class="line"> -->
+                    <div class="element3" style="opacity: 0;">
+                        
+                    </div>
+                    <div class="element3" style="opacity: 0;">
+                        
+                    </div>
+                    <div class="element3" style="opacity: 0;">
+                        
+                    </div>
+                    <div data-key="/" id="element3" class="key operator">
+                        <span>
+                            /
+                        </span>
+                    </div>
+                <!-- </div>
+                <div class="line"> -->
+                    <div data-key="7" id="element" class="key">
+                        <span>
+                            7
+                        </span>
+                    </div>
+                    <div data-key="8" id="element" class="key">
+                        <span>
+                            8
+                        </span>
+                    </div>
+                    <div data-key="9" id="element" class="key">
+                        <span>
+                            9
+                        </span>
+                    </div>
+                    <div data-key="*" id="element3" class="key operator">
+                        <span>
+                            *
+                        </span>
+                    </div>
+                <!-- </div>
+                <div class="line"> -->
+                    <div data-key="4" id="element" class="key">
+                        <span>
+                            4
+                        </span>
+                    </div>
+                    <div data-key="5" id="element" class="key">
+                        <span>
+                            5
+                        </span>
+                    </div>
+                    <div data-key="6" id="element" class="key">
+                        <span>
+                            6
+                        </span>
+                    </div>
+                    <div data-key="-" id="element3" class="key operator">
+                        <span>
+                            -
+                        </span>
+                    </div>
+                <!-- </div>
+                <div class="line"> -->
+                    <div data-key="1" id="element" class="key">
+                        <span>
+                            1
+                        </span>
+                    </div>
+                    <div data-key="2" id="element" class="key">
+                        <span>
+                            2
+                        </span>
+                    </div>
+                    <div data-key="3" id="element" class="key">
+                        <span>
+                            3
+                        </span>
+                    </div>
+                    <div data-key="+" id="element3" class="key operator">
+                        <span>
+                            +
+                        </span>
+                    </div>
+                <!-- </div>
+                <div class="line"> -->
+                    <div data-key="pm" id="element" class="key operator">
+                        <span>
+                            +/-
+                        </span>
+                    </div>
+                    <div data-key="0" id="element" class="key">
+                        <span>
+                            0
+                        </span>
+                    </div>
+                    <div data-key="." id="element" class="key">
+                        <span>
+                            .
+                        </span>
+                    </div>
+                    <div data-key="=" id="element2" class="key operator">
+                        <span>
+                            =
+                        </span>
+                    </div>
+                <!-- </div> -->
             </div>
         </div>
         <div class="history">
-    
+            
         </div>
     </div>
+    <script src="./calculator.js"></script>
 </body>
 </html>
