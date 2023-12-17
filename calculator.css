@@ -1,5 +1,5 @@
 body{
-    background-color: #22252d;
+    background-color: #1f1f1f;
     margin: 0;
     padding: 0;
     color: white;
@@ -16,14 +16,14 @@ body{
     background-color: #3b3b3b;
     /* background-color: #444; */
     padding: 25px 116.65px;
-    border: 1px solid black;
+    border: 1px solid #1f1f1f;
     border-radius: 5px;
 }
 .element3{
     background-color: #323232;
     color: white;
     padding: 25px 116.65px;
-    border: 1px solid black;
+    border: 1px solid #1f1f1f;
     border-radius: 5px;
 }
 .element:hover{
