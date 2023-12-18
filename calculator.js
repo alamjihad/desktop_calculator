@@ -18,18 +18,21 @@ for(let key of keys){
             display_input.innerHTML=input;
         }else if(value=="="){
             result = eval(input);
-            display_output.innerHTML=result;
-            his=his+`${input} = <br>${result}<br>`;
+            display_output.innerHTML=result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            his=his+`${input} = <br>${result.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}<br>`;
             hist.innerHTML=(his);
         }else{
             input+=value;
             display_input.innerHTML=input;
         }
     })
-};
-// function ans(){
-//     hist.innerHTML=("<br>"+input+" = "+"<br>"+result);
-// }
+}
+
+var rm=document.querySelector('.rm');
+function ans(){
+    rm.style.display="block";
+}
+
 function rmv(){
-    hist.innerHTML="";
+    hist.innerHTML=("");
 }

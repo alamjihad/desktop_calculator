@@ -69,7 +69,15 @@ body{
     text-align: right;
 }
 .rm{
+    display: none;
     position: absolute;
     top: 575px;
     left: 215px;
+    border: none;
+}
+#element2~.rm{
+    display: block;
+}
+.rm:hover{
+    background-color: #3b3b3b;
 }
