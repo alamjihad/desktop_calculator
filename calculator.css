@@ -15,7 +15,6 @@ body{
 }
 #element{
     background-color: #3b3b3b;
-    /* background-color: #444; */
     padding: 25px 116.65px;
     border: 1px solid #1f1f1f;
     border-radius: 5px;
@@ -71,12 +70,12 @@ body{
 .rm{
     display: none;
     position: absolute;
-    top: 575px;
-    left: 215px;
+    top: 590px;
+    left: 265px;
     border: none;
-}
-#element2~.rm{
-    display: block;
+    background-color: #1f1f1f;
+    color: aliceblue;
+    padding: 10px;
 }
 .rm:hover{
     background-color: #3b3b3b;
