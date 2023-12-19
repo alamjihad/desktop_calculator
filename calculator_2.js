@@ -11,7 +11,7 @@ keys.forEach(key=>{
 function calculate(){
     let buttonText=this.innerText;
     if(buttonText==="CE"){
-        output.innerText="";
+        output.innerText=output.textContent.substr(0,output.textContent.length-2);
         result.innerText="0";
         return;
     }
@@ -46,5 +46,9 @@ function ans(){
 }
 
 function rmv(){
-    hist.innerHTML=("");
+    const histItem = document.querySelector(".history");
+    while(histItem.firstChild){
+        histItem.removeChild(histItem.firstChild)
+    }
+    // hist.innerHTML=("");
 }
