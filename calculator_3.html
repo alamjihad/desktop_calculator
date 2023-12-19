@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./calculator_3.css">
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css>
+</head>
+<body>
+    <div class="app">
+        <div class="calculator">
+            <div class="content">
+                <div class="input">
+
+                </div>
+                <form>
+                    <div class="display">
+                        <!-- <div class="output">
+                            0
+                        </div> -->
+                        <input type="text" name="display" value="" id="ee1">
+                    </div>
+                    <div class="keys">
+                        <!-- <div class="line"> -->
+                            <input type="button" class="element3" style="opacity: 0;">
+                                
+                            </input>
+                            <input type="button" class="element3" style="opacity: 0;">
+                                
+                            </input>
+                            <input type="button" class="element3" style="opacity: 0;">
+                                
+                            </input>
+                            <input type="button" value="<" id="element3">
+                        <!-- </input>
+                        <input type="button" class="line"> -->
+        
+                            <input type="button" value="%" id="element3" onclick="display.value = '%' ">
+                            <input type="button" value="CE" id="element3" onclick="display.value = display.value.toString().slice(0,-2) ">
+                            <input type="button" value="C" id="element3" onclick="display.value = '' ">
+                            <input type="button" value="/" id="element3" onclick="display.value += '/' ">
+                        <!-- </input>
+                        <input type="button" class="line"> -->
+                            <input type="button" value="7" id="element" onclick="display.value += '7' ">
+                            <input type="button" value="8" id="element" onclick="display.value += '8' ">
+                            <input type="button" value="9" id="element" onclick="display.value += '9' ">
+                            <input type="button" value="*" id="element3" onclick="display.value += '*' ">
+                        <!-- </input>
+                        <input type="button" class="line"> -->
+                            <input type="button" value="4" id="element" onclick="display.value += '4' ">
+                            <input type="button" value="5" id="element" onclick="display.value += '5' ">
+                            <input type="button" value="6" id="element" onclick="display.value += '6' ">
+                            <input type="button" value="-" id="element3" onclick="display.value += '-' ">
+                        <!-- </input>
+                        <input type="button" class="line"> -->
+                            <input type="button" value="1" id="element" onclick="display.value += '1' ">
+                            <input type="button" value="2" id="element" onclick="display.value += '2' ">
+                            <input type="button" value="3" id="element" onclick="display.value += '3' ">
+                            <input type="button" value="+" id="element3" onclick="display.value += '+' ">
+                        <!-- </input>
+                        <input type="button" class="line"> -->
+                            <input type="button" value="+/-" id="element" onclick="display.value = (display.value)*(-1) ">
+                            <input type="button" value="0" id="element" onclick="display.value += '0' ">
+                            <input type="button" value="." id="element" onclick="display.value += '.' ">
+                            <input type="button" value="=" id="element2"  onclick="display.value = eval(display.value) ">
+                        <!-- </div> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+        
+</body>
+</html>
