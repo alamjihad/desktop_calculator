@@ -13,7 +13,13 @@ for(let key of keys){
             input ="";
             display_input.innerHTML="";
             display_output.innerHTML="";
-        }else if(value=="back"){
+        }else if(value=="pom"){
+            input=Number(input);
+            console.log(typeof(input));
+            input=input*(-1);
+            input=input.toString();
+        }
+        else if(value=="back"){
             input=input.slice(0,-1);
             display_input.innerHTML=input;
         }else if(value=="="){
