@@ -3,56 +3,27 @@ const result=document.querySelector(".result");
 const keys=document.querySelectorAll("button");
 const hist=document.querySelector('.history');
 
-document.body.addEventListener("keydown",(ev)=>{
-    console.log(ev.key);  
-    console.log("You pressed down.");
-    if(ev.key==="0"||ev.key==="1"||ev.key==="2"||ev.key==="3"||ev.key==="4"||ev.key==="5"||ev.key==="6"||ev.key==="7"||
-    ev.key==="8"||ev.key==="9"||ev.key=="-"||ev.key==".")
-    {
-        output.innerText += ev.key;
-        return;
-    }
-    else if(ev.key=="Enter"||ev.key=="="){
-        dj=eval(output.innerText);
-        result.innerHTML=dj;
-        his=his+`${output.innerText} = <br>${dj}<br><br>`;
-        hist.innerHTML=(his);
-        rm.style.display="block";
-        return;
-    }
-    else if(ev.ctrlKey && ev.key=="%"||ev.key=="*"||ev.key=="+"||ev.key=="/")
-    {
-        output.innerText += ev.key;
-        return;
-    }
-    else if(ev.key="Backspace")
-    {
-        output.innerText=output.textContent.substr(0,output.textContent.length-1);
-        return;
-    }
-    else if(ev.key=="Shift")
-    {
-        output.innerText=output.innerText;
-        return;
-    }
-});
 
 function clearone(){
-    let v = output.textContent.split('');
+    let v = output.innerText.split('');
     let ar = [0,1,2,3,4,5,6,7,8,9];
-    for(a of v){
-        let index = ar.indexOf(parseInt(a)); 
-        if(index == -1){
-            v.pop();
-            v= v.join("");
-            output.innerText=v;
-            break;
-        }else{
-            v.pop();            
-        }
-        return;
-    }
-}
+      
+      for(a of v){
+          let index = ar.indexOf(parseInt(a)); 
+          if(index == -1){
+              v.pop();
+              v= v.join("");
+              output.innerHTML=v;
+              console.log(v);
+              console.dir(v);
+              break;
+          }else{
+              v.pop();            
+          }   
+      }
+  }
+
+
 var dj="";
 var his="";
 keys.forEach(key=>{
@@ -60,9 +31,9 @@ keys.forEach(key=>{
 });
 function calculate(){
     let buttonText=this.innerText;
-    if (buttonText=== "CE") {
-        clearone()
-        return;
+
+    if (buttonText==="CE") {
+        clearone();
     }
     else if(buttonText==="C"){
         output.innerText="";
@@ -115,3 +86,42 @@ var acb= document.querySelector(".display");
 function drs(){
     acb.style.border="none";
 }
+
+document.body.addEventListener("keydown",(ev)=>{
+    if(ev.key==="0"||ev.key==="1"||ev.key==="2"||ev.key==="3"||ev.key==="4"||ev.key==="5"||ev.key==="6"||ev.key==="7"||
+    ev.key==="8"||ev.key==="9"||ev.key==".")
+    {
+        output.innerText += ev.key;
+        return;
+    }
+    else if(ev.key=="Enter"||ev.key=="="){
+        dj=eval(output.innerText);
+        result.innerHTML=dj;
+        his=his+`${output.innerText} = <br>${dj}<br><br>`;
+        hist.innerHTML=(his);
+        rm.style.display="block";
+        return;
+    }
+    else if(ev.key=="%"||ev.key=="*"||ev.key=="+"||ev.key=="/"||ev.key=="-")
+    {
+        if(result.innerHTML==0)
+        {
+            output.innerText += ev.key;
+        }
+        else
+        {
+            output.innerHTML=result.innerHTML+ev.key;
+        }
+        return;
+    }
+    else if(ev.key="Backspace")
+    {
+        output.innerText=output.textContent.substr(0,output.textContent.length-1);
+        return;
+    }
+    else if(ev.key=="Shift")
+    {
+        output.innerText=output.innerText;
+        return;
+    }
+});
