@@ -10,7 +10,7 @@
 <body>
     <div class="app">
         <div class="calculator">
-            <div class="display">            
+            <div class="display" onclick="drs()">            
                 <div class="output">
                     
                 </div>
@@ -28,13 +28,13 @@
                 <button style="opacity: 0;">
                     
                 </button>
-                <button  id="element3">
+                <button  id="element3"  style="font-size: 15px;">
                     <span>
-                        <
+                        <i class="fa-solid fa-delete-left"></i>
                     </span>
                 </button>
 
-                <button id="element3">
+                <button id="element3" style="font-size: 18px;">
                     <span>
                         %
                     </span>
@@ -49,8 +49,8 @@
                         C
                     </span>
                 </button>
-                <button id="element3">
-                    /
+                <button id="element3" style="font-size: 18px;">
+                    <i class="fa-solid fa-divide"></i>
                 </button>
 
                 <button id="element" >
@@ -62,8 +62,8 @@
                 <button id="element" >
                     9
                 </button>
-                <button id="element3">
-                    *
+                <button id="element3" style="font-size: 20px;">
+                    x
                 </button>
                 
                 <button id="element" >
@@ -75,7 +75,7 @@
                 <button id="element" >
                     6
                 </button>
-                <button id="element3">
+                <button id="element3" style="font-size: 25px;">
                     -
                 </button>
 
@@ -88,20 +88,20 @@
                 <button id="element" >
                     3
                 </button>
-                <button id="element3">
+                <button id="element3" style="font-size: 25px;">
                     +
                 </button>
 
-                <button id="element">
+                <button id="element" style="padding: 16px 113px;">
                     +/-
                 </button>
-                <button id="element" >
+                <button id="element"  style="padding: 16px 113px;">
                     0
                 </button>
-                <button id="element" >
+                <button id="element"  style="padding: 16px 113px;">
                     .
                 </button>
-                <button id="element2" onclick="ans()">
+                <button id="element2" onclick="ans()" style="padding: 16px 113px;">
                     =
                 </button>
             </div>
