@@ -57,16 +57,17 @@ function calculate(){
         return;
     }
     else{
-        if(result.innerHTML!==0){
-            output.textContent = result.innerHTML+buttonText;
-            // output.textContent = output.textContent+buttonText;
-            return;
-        }
-        else{
-            output.textContent = output.textContent+buttonText;
-            // output.textContent = result.innerHTML+buttonText;
-            return;
-        }
+        // if(result.innerHTML!==0){
+        //     output.textContent = result.innerHTML+ev.key+buttonText;
+        //     // output.textContent = output.textContent+buttonText;
+        //     return;
+        // }
+        // else{
+        //     output.innerText +=buttonText;
+        //     // output.textContent = result.innerHTML+buttonText;
+        //     return;
+        // }
+         output.innerText +=buttonText;
     }
 }
 
@@ -104,7 +105,7 @@ document.body.addEventListener("keydown",(ev)=>{
     }
     else if(ev.key=="%"||ev.key=="*"||ev.key=="+"||ev.key=="/"||ev.key=="-")
     {
-        if(result.innerHTML==0)
+        if(result.innerHTML===0)
         {
             output.innerText += ev.key;
         }
@@ -119,9 +120,9 @@ document.body.addEventListener("keydown",(ev)=>{
         output.innerText=output.textContent.substr(0,output.textContent.length-1);
         return;
     }
-    else if(ev.key=="Shift")
-    {
-        output.innerText=output.innerText;
-        return;
-    }
+    // else if(ev.key==="Shift"||ev.key=="Alt")
+    // {
+    //     output.innerText=output.innerText;
+    //     return;
+    // }
 });
